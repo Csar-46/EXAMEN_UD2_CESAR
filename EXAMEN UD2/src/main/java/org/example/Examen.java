@@ -58,8 +58,8 @@ public class Examen {
 
         int anyo = -1;
 
-        LocalDateTime hoy = LocalDateTime.now();
-        int anyo_actual = hoy.getYear();
+        LocalDateTime hoy = LocalDateTime.now(); //Esta linea guarda la facha actual
+        int anyo_actual = hoy.getYear(); //y esta le da el valor a una variable
 
         try {//Controlo que el formato de entrada no sea erroneo
 
