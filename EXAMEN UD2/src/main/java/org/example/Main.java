@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
 
         Examen ejercicio = new Examen();
-        ejercicio.ejercicio1();
+        //ejercicio.ejercicio1();
         ejercicio.ejercicio2();
 
     }
