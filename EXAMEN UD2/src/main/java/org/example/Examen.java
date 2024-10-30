@@ -56,9 +56,9 @@ public class Examen {
         Scanner entrada = new Scanner(System.in);
 
         int anyo = -1;
-        try {
+        try {//Controlo que el formato de entrada no sea erroneo
 
-            while (anyo < 0 || anyo > 2024) {
+            while (anyo < 0 || anyo > 2024) { //Siempre que el año sea negativo o mayor que el año actual lo volverá a pedir
                 System.out.println("Introduce un año real (ni negativo ni mayor al año actual).");
                 anyo = entrada.nextInt();
             }
@@ -66,8 +66,8 @@ public class Examen {
             int anyo_bisiesto = 0;
 
 
-            while (anyo <= 2024) {
-                if (anyo % 4 == 0 && anyo % 100 != 0) {
+            while (anyo <= 2024) { //El bucle recorre los años desde el introducido al actual comprobando todas las condiciones dadas en el enundiado.
+                if (anyo % 4 == 0 && anyo % 100 != 0) { //Cuando la condicion se cumple, suma 1 al contador de años bisiestos.
                     anyo_bisiesto++;
                 } else if (anyo % 4 == 0) {
                     if (anyo % 100 == 0) {
@@ -79,7 +79,7 @@ public class Examen {
                 anyo++;
             }
 
-            System.out.println("Han habido " + anyo_bisiesto + " años bisiestos.");
+            System.out.println("Han habido " + anyo_bisiesto + " años bisiestos.");//Al final imprime la cantidad de ños bisiestos.
 
         } catch (InputMismatchException e) {
             System.out.println("ERROR. Introduce formato numérico " + e + ".");
